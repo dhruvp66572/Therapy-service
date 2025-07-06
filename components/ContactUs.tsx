@@ -2,7 +2,7 @@
 import React from 'react'
 
 const ContactUs = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.currentTarget;
 
@@ -28,7 +28,7 @@ We will get back to you shortly.
 
     if (response) {
       // Here you would typically send the data to your server or API
-      console.log("Form submitted:", data);
+      console.log("Form submitted:", data);       
     }
     form.reset(); // Reset the form after submission
 
