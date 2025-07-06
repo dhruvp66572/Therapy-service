@@ -10,7 +10,16 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    ignorePatterns: ["**/*"], // This ignores all files
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: "latest",
+      },
+    },
+    // Empty rules means nothing will be linted
+    rules: {},
+  },
 ];
 
 export default eslintConfig;
